@@ -1,0 +1,147 @@
+/* 1. Importar fuente Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --color-bg: #ECF0F1;
+  --color-foreground: #2C3E50;
+  --color-accent: #3498DB;
+  --color-white: #FFFFFF;
+  --radius: 6px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-foreground);
+}
+
+/* Header */
+header {
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+header a {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Main layout */
+main {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Sidebar (nav) */
+nav {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+nav a {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-foreground);
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+nav a:hover {
+  background: var(--color-bg);
+}
+
+/* Section */
+section {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Tabla de artículos */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+th {
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-weight: 500;
+}
+tr:nth-child(even) {
+  background: var(--color-bg);
+}
+tr:hover {
+  background: rgba(52,152,219,0.1);
+}
+
+/* Formulario */
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+form label {
+  font-weight: 500;
+}
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  transition: border-color 0.2s;
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+}
+form input[type="submit"] {
+  justify-self: start;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+form input[type="submit"]:hover {
+  background: #2980B9;
+}
+
+/* Footer */
+footer {
+  background: var(--color-foreground);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}

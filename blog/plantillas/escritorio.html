@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/admin.css">
+	</head>
+	<body>
+		<header>
+			<a href="?">{titulo}</a>
+		  </header>
+		  <main>
+			<nav class="sidebar">{navegacion}</nav>
+			<section>
+			  <if condition="insertar">
+				<iframe id="plantillas/escritorio/formulario.html"></iframe>
+			  <else>
+				<iframe id="plantillas/escritorio/tabla.html"></iframe>
+			  </if>
+			</section>
+		  </main>
+		  <footer>{autor}</footer>
+	</body>
+</html>
